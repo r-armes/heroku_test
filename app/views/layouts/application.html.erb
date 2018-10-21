@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Yegram</title>
+    <title>YEgram</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -12,8 +12,8 @@
   <body>
     <% if user_signed_in? %>
     <nav>
-      <%= link_to 'Logout', destroy_user_session_path, method: :delete %>        
-      <%= link_to 'Home', root_path %>
+      <%= link_to 'LogYEout', destroy_user_session_path, method: :delete %>        
+      <%= link_to 'hYEome', root_path %>
     </nav>
     <% end %>
     <%= yield %>

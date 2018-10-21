@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+<div class="content">
+<h1>YEmages</h1>
+
+<div>
+  <p>
+    <% @images.each do |image| %>
+    <img src="<%= image.url %>" width="400px" alt="<%= image.title %>">
+      <br>
+      <strong><%= image.user.email %></strong>
+      posted:
+      <%= image.title %>
+      <br>
+      <p id="time-created">
+        <%= time_ago_in_words(image.created_at) %> ago
+      <%= link_to 'ViYEw', image %>
+      <% if image.user == current_user %>
+        <%= link_to 'YEdit', edit_image_path(image) %>
+        <%= link_to 'YElete', image, method: :delete, data: { confirm: 'Are YE sure?' } %>
+      <% end %>
+      </p>
+      <br>
+      <br>
+    <% end %>
+    </p>
+  </p>
+</div>
+
+<br>
+
+<%= link_to 'Upload nYEew YEmage', new_image_path %>
+</div>

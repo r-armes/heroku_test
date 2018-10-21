@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+/* body {
+    background: url('ye_background1.png') no-repeat;
+    margin:0;
+    padding:0;
+    background-size: 100%;
+
+}
+
+.content {
+    background: black;
+} */
+
+#time-created {
+    font-size: 0.85em;
+}

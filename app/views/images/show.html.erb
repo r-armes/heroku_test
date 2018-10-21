@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+<div>
+  <p>
+    <img src="<%= @image.url %>" width="400px" alt="<%= @image.title %>">
+  </p>
+  <p>
+    <strong><%= @image.user.email %></strong>
+    posted:
+    <%= @image.title %>
+    <br>
+    <p id="time-created">
+      <%= time_ago_in_words(@image.created_at) %> ago
+    </p>
+  </p>
+
+
+  <% if @image.user == current_user %>  
+    <%= link_to 'Edit', edit_image_path(@image) %> |
+  <% end %>
+  <%= link_to 'Back', images_path %>
+</div>
